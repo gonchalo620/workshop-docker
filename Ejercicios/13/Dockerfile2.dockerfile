@@ -9,4 +9,4 @@ WORKDIR /var
 RUN pwd
 EXPOSE 8081
 WORKDIR /usr/local/apache2
-CMD [ "httpd-foreground" ]
+CMD ["httpd", "-D", "FOREGROUND"]
