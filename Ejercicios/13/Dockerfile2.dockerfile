@@ -1,4 +1,4 @@
-FROM httpd:latest
+FROM nginx:latest
 ARG ARGUMENTO=SiNoMePasaNada
 RUN echo ${ARGUMENTO}
 ARG SINNADA
@@ -8,5 +8,3 @@ RUN echo ${CLAVE}
 WORKDIR /var
 RUN pwd
 EXPOSE 8081
-WORKDIR /usr/local/apache2
-CMD ["httpd", "-D", "FOREGROUND"]
